@@ -1,0 +1,29 @@
+.page-header {
+    color: red;
+    text-align: center;
+    font-family: Arial;
+}
+
+.flag-body {
+    height: 810px;
+    border: 2px solid;
+}
+
+.flag-white {
+    height: 270px;
+    background-color: white;
+}
+
+.flag-blue {
+    height: 270px;
+    background-color: blue;
+}
+
+.flag-red {
+    height: 270px;
+    background-color: red;
+}
+
+#text {
+    font-size: 17px;
+}
