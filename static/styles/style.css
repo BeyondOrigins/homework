@@ -1,29 +1,42 @@
-.page-header {
-    color: red;
+.container {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 950px;
+}
+
+.header {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 50px;
     text-align: center;
-    font-family: Arial;
+    margin: 0 auto;
+    margin-top: 200px;
+    color: #666666;
 }
 
-.flag-body {
-    height: 810px;
-    border: 2px solid;
+#error-text {
+    text-align: center;
+    margin: 400px auto;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 50px;
+    color: #666666;
 }
 
-.flag-white {
-    height: 270px;
-    background-color: white;
+#name {
+    font-weight: bold;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 25px;
+    color: #666666;
 }
 
-.flag-blue {
-    height: 270px;
-    background-color: blue;
+.info-text {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 18px;
+    color: #666666;
 }
 
-.flag-red {
-    height: 270px;
-    background-color: red;
-}
 
-#text {
-    font-size: 17px;
+#avatar {
+    height: 300px;
+    margin-right: 20px;
 }

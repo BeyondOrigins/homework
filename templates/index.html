@@ -4,20 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/styles/style.css">
-    <title>Флаг</title>
+    <link rel="stylesheet" href="{{url_for("static", filename="styles/style.css")}}">
+    <title>Информация о пользователе</title>
 </head>
 <body>
-    <h1 class="page-header">ФЛАГ РОССИИ</h1>
-    <div class="flag-body">
-        <div class="flag-white"></div>
-        <div class="flag-blue"></div>
-        <div class="flag-red"></div>
+    <div class="header">О себе</div>
+    <div class="container">
+        <div class="photo">
+            <img id="avatar" src="{{user.image}}">
+        </div>
+        <div class="info">
+            <h3 id="name">{{user.name}}</h2>
+            <br>
+            <p class="info-text"><b>Образование: </b>{{user.education}}</p>
+            {% if user.age % 10 == 1 %}
+                <p class="info-text"><b>Возраст: </b>{{user.age}} год</p>
+            {% elif 2 <= user.age % 10 <= 4 %}
+                <p class="info-text"><b>Возраст: </b>{{user.age}} года</p>
+            {% else %}
+                <p class="info-text"><b>Возраст: </b>{{user.age}} лет</p>
+            {% endif %}
+            <br>
+            {% if user.developmentExperience % 10 == 1 %}
+                <p class="info-text">Профессионально занимаюсь веб-разработкой {{user.developmentExperience}} год</p>
+            {% elif 2 <= user.developmentExperience % 10 <= 4 %}
+                <p class="info-text">Профессионально занимаюсь веб-разработкой {{user.developmentExperience}} года</p>
+            {% else %}
+                <p class="info-text">Профессионально занимаюсь веб-разработкой {{user.developmentExperience}} лет</p>
+            {% endif %}
+            <br>
+            <p class="info-text">Готов(а) разработать для Вас сайт с индивидуальным дизайном быстро и качественно!</p>
+        </div>
     </div>
-    <p id="text">
-        Флаг России (Госуда́рственный флаг Росси́йской Федера́ции) — один из официальных государственных символов Российской Федерации[4] наряду с Государственным гербом и Государственным гимном. 
-        Представляет собой прямоугольное полотнище из трёх равновеликих горизонтальных полос: верхней — белого, средней — синего и нижней — красного цвета. Отношение ширины флага к его длине
-        составляет 2:3
-    </p>
 </body>
 </html>
